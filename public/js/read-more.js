@@ -3,25 +3,32 @@
     return window.LP = (function() {
       var initialHeight;
 
-      initialHeight = 710;
+      initialHeight = 400;
       return {
-        showMore: $('.button').on('click', function() {
-          if ($('.read-more-container').height() > 710) {
+        open: $('.button').on('click', function() {
+          if ($('.read-more-container').height() > 400) {
             $('.read-more-container').animate({
               height: initialHeight
             }, 500);
-            $(this).text('Read More');
+            $(this).text('Read more');
           } else {
             $('.read-more-container').animate({
-              height: 2330
+              height: 1600
             }, 500);
-            $(this).text('Read Less');
+            $(this).text('Read less');
           }
           return false;
         }),
-        lightbox: $('.image-container').click(function() {
-          $(this).toggleClass('lightbox').siblings().removeClass('lightbox');
-          return $('.image-container').children('img').toggleClass('lightboxImage');
+        lightbox: $('.images-container').on('click', 'img', function() {
+          var image, lightboxContainer;
+
+          image = $('<img/>').addClass('lightboxImage').attr('src', $(this).attr('src'));
+          lightboxContainer = $('<div/>').addClass('lightbox').append(image);
+          return $('body').append(lightboxContainer).on('keyup', function(e) {
+            if (e.keyCode === 13 || e.keyCode === 27) {
+              return $('.lightbox').remove();
+            }
+          });
         })
       };
     })();

@@ -1,33 +1,33 @@
-# I haven't used coffeescript before, but it wasn't too bad
-
 $ ->
 
   window.LP = (->
 
-    initialHeight = 710
+    initialHeight = 400
 
     return {
 
-      #I kept this one pretty much the same except I edited it for the right size. 
-      showMore : $('.button').on 'click', ->
-        if $('.read-more-container').height() > 710
+      open : $('.button').on 'click', ->
+        if $('.read-more-container').height() > 400
           $('.read-more-container').animate(
             height: initialHeight
           , 500)
-          $(this).text('Read More')
+          $(this).text('Read more')
         else
           $('.read-more-container').animate(
-            height: 2330
+            height: 1600
           , 500)
-          $(this).text('Read Less')
+          $(this).text('Read less')
         false
 
 
-      #I used toggleClass to cut down on the code for this. toggleClass was also chosen because it is better at cross-browser useability (read: IE pre-10), rather than targeting a class by using getElementByClassName in pure javascript 
+      lightbox : $('.images-container').on 'click', 'img', ->
+        image = $('<img/>').addClass('lightboxImage').attr('src', $(this).attr('src'))
+        lightboxContainer = $('<div/>').addClass('lightbox').append(image)
 
-      lightbox : $('.image-container').click ->
-        $(this).toggleClass('lightbox').siblings().removeClass('lightbox')
-        $('.image-container').children('img').toggleClass 'lightboxImage'
+        $('body').append(lightboxContainer).on 'keyup', (e) ->
+          if e.keyCode is 13 or e.keyCode is 27
+            $('.lightbox').remove()
+
     }
 
   )()
