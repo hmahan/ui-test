@@ -1,25 +1,7 @@
 body {
-  font-family: Georgia;
+  font-family: Georgia, Times New Roman, Times, serif;
   padding: 0;
   margin: 0;
-}
-
-.container {
-  width: 1000px;
-  margin: 0 auto;
-}
-
-.read-more-container {
-  margin-top: 30px;
-  height: 400px;
-  overflow: hidden;
-  line-height: 1.5;
-}
-.read-more-container h2 {
-  margin-top: 20px;
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
 }
 
 ul {
@@ -30,147 +12,188 @@ ul {
   position: absolute;
   left: 50%;
   margin-left: -41px;
-  top: 9px;
+  top: 6px;
 }
 
-.button {
-  background-color: #1e344c;
-  padding: 10px;
-  color: white;
-  margin-top: 10px;
-  text-decoration: none;
-}
-
-h1 {
-  font-size: 20px;
-}
-
-h3 {
-  font-size: 14px;
-  color: #133944;
-}
-
-.images-container {
-  margin-top: 50px;
-  overflow: hidden;
-}
-
-.first-image, .second-image, .third-image {
-  float: left;
-  width: 30%;
-  margin-right: 5%;
-}
-.first-image img, .second-image img, .third-image img {
-  max-width: 100%;
-}
-
-.third-image {
-  margin-right: 0;
-}
-
-.image-container {
-  height: 150px;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.navigation {
-  font-family: arial;
+nav {
+  font-family: Arial, sans-serif;
+  font-size: 1em;
   text-align: center;
   background-color: #124385;
 }
-.navigation ul {
-  display: inline-block;
-  height: 60px;
-  margin: 0;
+nav ul {
+  height: 50px;
+  margin: 0 auto;
+  width: 100%;
 }
-.navigation ul li {
+nav li {
   display: inline-block;
   text-align: left;
   float: left;
-  height: 60px;
+  height: 10%;
   margin: 0;
-  background-color: #124385;
-  width: 150px;
+  width: 14.0%;
 }
-.navigation ul li:nth-child(3) {
-  margin-right: 150px;
+nav li:nth-child(4) {
+  margin-left: 10%;
 }
-.navigation ul li a {
+nav li a {
   color: white;
   text-decoration: none;
-  line-height: 60px;
-  padding: 0 15px;
+  line-height: 50px;
+  padding: 0 40%;
 }
-.navigation ul li a:hover {
+nav li a:hover {
   text-decoration: underline;
 }
 
 .sub-navigation {
-  font-family: arial;
+  font-family: Arial, sans-serif;
   margin-bottom: 60px;
   text-align: center;
   background-color: #e5ebee;
 }
 .sub-navigation ul {
   display: inline-block;
-  height: 60px;
+  height: 40px;
   margin: 0;
   padding: 0;
 }
 .sub-navigation ul li {
   float: left;
-  height: 60px;
+  height: 40px;
   width: auto;
   margin: 0;
+  font-size: 0.9em;
 }
 .sub-navigation ul li a {
   color: #133944;
   text-decoration: none;
-  line-height: 60px;
+  line-height: 40px;
   padding: 0 15px;
 }
 .sub-navigation ul li a:hover {
   text-decoration: underline;
 }
 
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+article {
+  width: 55%;
+  padding-right: 3%;
+  padding-bottom: 30px;
+  float: left;
+}
+
+.read-more-container {
+  margin-top: 30px;
+  height: 710px;
+  overflow: hidden;
+  line-height: 1.5;
+}
+.read-more-container h2 {
+  margin-top: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.button {
+  background-color: #1e344c;
+  padding: 10px;
+  color: white;
+  position: relative;
+  top: 15px;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.05em;
+  color: #133944;
+}
+
+aside {
+  margin-top: 8%;
+  float: right;
+  width: 35%;
+}
+
+.first-image, .second-image, .third-image {
+  float: left;
+  width: 60%;
+  margin-right: 5%;
+}
+.first-image img, .second-image img, .third-image img {
+  max-width: 100%;
+}
+.first-image p, .second-image p, .third-image p {
+  font-size: 0.8em;
+}
+
+.image-container {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
 .lightbox {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #00264c;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  height: 97%;
 }
 .lightbox .lightboxImage {
   position: absolute;
   left: 30%;
-  top: 30%;
+  top: 20%;
   border: 10px solid white;
+}
+.lightbox p {
+  color: white;
+  position: relative;
+  left: 30%;
+  top: 90%;
+  clear: both;
 }
 
 footer {
-  font-family: arial;
+  font-family: Arial, sans-serif;
   overflow: hidden;
+  clear: both;
+  width: 100%;
   font-size: 12px;
   background-color: #e5ebee;
   margin-top: 50px;
   padding-top: 20px;
 }
-footer nav {
+footer .footer_container {
+  padding-left: 11%;
+}
+footer .footer_container .footer_nav {
   float: left;
   width: 25%;
   margin-bottom: 20px;
 }
-footer h3 {
+footer .footer_container h3 {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-footer ul {
+footer .footer_container ul {
   margin: 0;
   padding: 0;
 }
-footer ul li {
+footer .footer_container ul li {
   margin: 0;
   display: block;
   padding: 10px 0;
